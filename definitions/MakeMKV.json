@@ -1,0 +1,285 @@
+{
+  "id": "MakeMKV",
+  "name": "MakeMKV",
+  "publisher": "GuinpinSoft",
+  "appName": "MakeMKV.app",
+  "bundleId": "com.makemkv.MakeMKV",
+  "currentVersion": "2.0.0",
+  "lastModified": "2026-09-20T00:00:00Z",
+  "requirements": [
+    {
+      "name": "Application Bundle ID",
+      "operator": "is",
+      "value": "com.makemkv.MakeMKV",
+      "type": "recon",
+      "and": true
+    }
+  ],
+  "patches": [
+    {
+      "version": "2.0.0",
+      "releaseDate": "2026-09-20T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "2.0.0",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v2.0.0",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "1.18.4",
+      "releaseDate": "2026-06-15T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "1.18.4",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v1.18.4",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "1.18.3",
+      "releaseDate": "2026-01-25T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "1.18.3",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v1.18.3",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "1.18.2",
+      "releaseDate": "2025-09-25T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "1.18.2",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v1.18.2",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "1.18.1",
+      "releaseDate": "2025-04-05T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "1.18.1",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v1.18.1",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "1.18.0",
+      "releaseDate": "2025-04-04T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.7",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.makemkv.MakeMKV",
+          "appName": "MakeMKV.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "MakeMKV",
+          "version": "1.18.0",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.makemkv.MakeMKV",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "v1.18.0",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.7",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "extensionAttributes": []
+}
