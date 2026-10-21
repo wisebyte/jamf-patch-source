@@ -1,0 +1,22 @@
+{
+  "ProPresenter": {
+    "name": "ProPresenter", "publisher": "Renewed Vision", "appName": "ProPresenter.app",
+    "bundleId": "com.renewedvision.propresenter",
+    "source": {"type": "renewedvision", "osVersions": ["10.15", "11.0", "12.0", "13.0", "99"]},
+    "notes": "Bundle ID + CFBundleShortVersionString verified from Info.plist in vendor zips 21.4 and 7.14.1"
+  },
+  "Logos": {
+    "name": "Logos Bible Study", "publisher": "Faithlife", "appName": "Logos.app",
+    "bundleId": "com.logos.desktop.logos",
+    "source": {"type": "logos_atom", "url": "https://clientservices.logos.com/update/v1/feed/logos10-mac/stable.xml"},
+    "notes": "Bundle ID + CFBundleShortVersionString (54.3.0.0005) verified from Info.plist in vendor DMG"
+  },
+  "DanteController": {
+    "name": "Dante Controller", "publisher": "Audinate", "appName": "Dante Controller.app",
+    "bundleId": "com.audinate.dante.DanteController",
+    "source": {"type": "sparkle", "urls": [
+      "https://audinate.jfrog.io/artifactory/ad8-software-updates-prod/DanteController/appcast/DanteController-apple_silicon.xml",
+      "https://audinate.jfrog.io/artifactory/ad8-software-updates-prod/DanteController/appcast/DanteController-apple_intel.xml"]},
+    "notes": "Bundle ID + CFBundleShortVersionString verified from PackageInfo in vendor pkg 4.18.1.1"
+  }
+}
