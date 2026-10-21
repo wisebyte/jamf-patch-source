@@ -45,3 +45,8 @@ else:
 (OUT / "_headers").write_text("/software\n  Content-Type: application/json\n/software/*\n  Content-Type: application/json\n/patch/*\n  Content-Type: application/json\n")
 (OUT / "index.html").write_text("<p>Jamf Pro external patch source. See <a href='software'>software</a>.</p>\n")
 print(f"built {len(ids)} titles into {OUT}")
+
+# Cloudflare Pages: serve every endpoint as JSON
+import pathlib as _p
+(_p.Path(__file__).resolve().parent.parent / "_site" / "_headers").write_text(
+    "/*\n  Content-Type: application/json; charset=utf-8\n  Access-Control-Allow-Origin: *\n")
