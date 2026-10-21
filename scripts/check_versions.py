@@ -4,7 +4,7 @@ Only versions present in the vendor feed are ever added; existing entries are ne
 Idempotent: a definition file is rewritten only when a new version appears (lastModified/currentVersion bump).
 Creates the definition if it does not exist. Usage: check_versions.py [id ...]
 """
-import datetime as dt, email.utils, json, pathlib, sys, urllib.request, xml.etree.ElementTree as ET
+import re, datetime as dt, email.utils, json, pathlib, sys, urllib.request, xml.etree.ElementTree as ET
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEFS = ROOT / "definitions"
 UA = {"User-Agent": "wisebyte-patch-source/1.0 (+https://github.com/wisebyte/jamf-patch-source)"}
@@ -53,7 +53,18 @@ def f_sparkle(s):
             if v not in out: out[v.strip()] = (date, os_norm(mos))
     return out
 
-FETCH = {"renewedvision": f_renewedvision, "logos_atom": f_logos_atom, "sparkle": f_sparkle}
+def f_download_page(s):
+    """Scrape vendor download page for versioned installer URLs; date = HTTP Last-Modified of that file."""
+    out = {}
+    page = get(s["url"]).decode("utf-8", "replace")
+    for url, v in set(re.findall(s["regex"], page)):
+        req = urllib.request.Request(url, method="HEAD", headers=UA)
+        with urllib.request.urlopen(req, timeout=60) as r:
+            lm = r.headers.get("Last-Modified")
+        out[v] = (iso(email.utils.parsedate_to_datetime(lm)) if lm else None, s.get("minOS"))
+    return out
+
+FETCH = {"download_page": f_download_page, "renewedvision": f_renewedvision, "logos_atom": f_logos_atom, "sparkle": f_sparkle}
 
 def crit(name, value): return {"name": name, "operator": "is", "value": value, "type": "recon", "and": True}
 
