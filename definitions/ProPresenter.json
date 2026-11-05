@@ -4,8 +4,8 @@
   "publisher": "Renewed Vision",
   "appName": "ProPresenter.app",
   "bundleId": "com.renewedvision.propresenter",
-  "currentVersion": "21.4",
-  "lastModified": "2026-10-21T17:05:42Z",
+  "currentVersion": "22",
+  "lastModified": "2026-11-05T19:56:26Z",
   "requirements": [
     {
       "name": "Application Bundle ID",
@@ -16,6 +16,50 @@
     }
   ],
   "patches": [
+    {
+      "version": "22",
+      "releaseDate": "2026-11-05T00:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "14.6",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.renewedvision.propresenter",
+          "appName": "ProPresenter.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "ProPresenter",
+          "version": "22",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.renewedvision.propresenter",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "22",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "14.6",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
     {
       "version": "21.4",
       "releaseDate": "2026-06-18T00:00:00Z",
