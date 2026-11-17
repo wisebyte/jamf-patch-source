@@ -4,8 +4,8 @@
   "publisher": "Faithlife",
   "appName": "Logos.app",
   "bundleId": "com.logos.desktop.logos",
-  "currentVersion": "54.3.0.0005",
-  "lastModified": "2026-10-21T17:05:42Z",
+  "currentVersion": "55.0.0.0362",
+  "lastModified": "2026-11-17T20:54:42Z",
   "requirements": [
     {
       "name": "Application Bundle ID",
@@ -16,6 +16,50 @@
     }
   ],
   "patches": [
+    {
+      "version": "55.0.0.0362",
+      "releaseDate": "2026-11-17T19:04:39Z",
+      "standalone": true,
+      "minimumOperatingSystem": "15.0",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.logos.desktop.logos",
+          "appName": "Logos.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Logos Bible Study",
+          "version": "55.0.0.0362",
+          "criteria": [
+            {
+              "name": "Application Bundle ID",
+              "operator": "is",
+              "value": "com.logos.desktop.logos",
+              "type": "recon",
+              "and": true
+            },
+            {
+              "name": "Application Version",
+              "operator": "is",
+              "value": "55.0.0.0362",
+              "type": "recon",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "15.0",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
     {
       "version": "54.3.0.0005",
       "releaseDate": "2026-10-19T21:12:07Z",
