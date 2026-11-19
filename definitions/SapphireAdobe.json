@@ -5,7 +5,7 @@
   "appName": "sapphire-ae64.bundle",
   "bundleId": "com.genarts.SapphireAE.plugins",
   "currentVersion": "20.0",
-  "lastModified": "2026-11-19T20:08:37Z",
+  "lastModified": "2026-11-19T20:44:30Z",
   "requirements": [
     {
       "name": "jamf-patch-sapphire-adobe",
@@ -139,8 +139,130 @@
       "dependencies": []
     },
     {
+      "version": "19.51",
+      "releaseDate": "2026-07-24T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "19.51",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "19.51",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "19.5",
+      "releaseDate": "2026-05-20T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "19.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "19.5",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "19.01",
-      "releaseDate": "2026-02-20T05:00:00Z",
+      "releaseDate": "2025-11-19T05:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -200,8 +322,69 @@
       "dependencies": []
     },
     {
+      "version": "19.0",
+      "releaseDate": "2025-11-19T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "19.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "19.0",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "18.53",
-      "releaseDate": "2025-12-18T05:01:00Z",
+      "releaseDate": "2025-12-18T05:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -244,6 +427,189 @@
               "name": "jamf-patch-sapphire-adobe",
               "operator": "is",
               "value": "18.53",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "18.52",
+      "releaseDate": "2025-07-25T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.52",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.52",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "18.51",
+      "releaseDate": "2025-06-03T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.51",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.51",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "18.5",
+      "releaseDate": "2025-04-30T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.5",
               "type": "extensionAttribute",
               "and": true
             }
@@ -322,6 +688,189 @@
       "dependencies": []
     },
     {
+      "version": "18.02",
+      "releaseDate": "2025-06-07T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.02",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.02",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "18.01",
+      "releaseDate": "2025-02-24T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.01",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.01",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "18.0",
+      "releaseDate": "2024-11-20T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "18.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "18.0",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "17.53",
       "releaseDate": "2024-09-22T04:00:00Z",
       "standalone": true,
@@ -366,6 +915,128 @@
               "name": "jamf-patch-sapphire-adobe",
               "operator": "is",
               "value": "17.53",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "17.52",
+      "releaseDate": "2024-08-09T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.52",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.52",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "17.51",
+      "releaseDate": "2024-05-14T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.51",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.51",
               "type": "extensionAttribute",
               "and": true
             }
@@ -444,6 +1115,250 @@
       "dependencies": []
     },
     {
+      "version": "17.020",
+      "releaseDate": "2024-01-28T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.020",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.020",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "17.010",
+      "releaseDate": "2023-12-20T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.010",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.010",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "17.5",
+      "releaseDate": "2024-04-16T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.5",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "17.0",
+      "releaseDate": "2023-11-01T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "17.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "17.0",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "16.503",
       "releaseDate": "2023-10-01T04:00:00Z",
       "standalone": true,
@@ -488,6 +1403,189 @@
               "name": "jamf-patch-sapphire-adobe",
               "operator": "is",
               "value": "16.503",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "16.502",
+      "releaseDate": "2023-08-25T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.502",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.502",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "16.501",
+      "releaseDate": "2023-05-15T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.501",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.501",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "16.5",
+      "releaseDate": "2023-04-12T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.5",
               "type": "extensionAttribute",
               "and": true
             }
@@ -566,8 +1664,191 @@
       "dependencies": []
     },
     {
+      "version": "16.02",
+      "releaseDate": "2023-03-02T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.02",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.02",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "16.01",
+      "releaseDate": "2022-12-21T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.01",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.01",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "16.0",
+      "releaseDate": "2022-11-16T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "16.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "16.0",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "15.54",
-      "releaseDate": "2022-10-19T04:00:00Z",
+      "releaseDate": "2022-11-17T05:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -627,8 +1908,252 @@
       "dependencies": []
     },
     {
+      "version": "15.53",
+      "releaseDate": "2022-10-19T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.53",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.53",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.52",
+      "releaseDate": "2022-08-02T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.52",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.52",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.51",
+      "releaseDate": "2022-06-28T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.51",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.51",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.5",
+      "releaseDate": "2022-05-26T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.5",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "15.04",
-      "releaseDate": "2022-03-31T05:00:00Z",
+      "releaseDate": "2022-03-31T04:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -671,6 +2196,250 @@
               "name": "jamf-patch-sapphire-adobe",
               "operator": "is",
               "value": "15.04",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.03",
+      "releaseDate": "2022-02-17T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.03",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.03",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.02",
+      "releaseDate": "2022-02-04T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.02",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.02",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.01",
+      "releaseDate": "2021-12-18T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.01",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.01",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "15.0",
+      "releaseDate": "2021-11-16T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "15.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "15.0",
               "type": "extensionAttribute",
               "and": true
             }
@@ -749,8 +2518,69 @@
       "dependencies": []
     },
     {
+      "version": "14.5",
+      "releaseDate": "2021-05-04T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "14.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "14.5",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "14.02",
-      "releaseDate": "2021-03-29T05:00:00Z",
+      "releaseDate": "2021-03-29T04:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -793,6 +2623,128 @@
               "name": "jamf-patch-sapphire-adobe",
               "operator": "is",
               "value": "14.02",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "14.01",
+      "releaseDate": "2020-12-12T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "14.01",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "14.01",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "14.0",
+      "releaseDate": "2020-11-22T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "14.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "14.0",
               "type": "extensionAttribute",
               "and": true
             }
@@ -871,6 +2823,189 @@
       "dependencies": []
     },
     {
+      "version": "13.52",
+      "releaseDate": "2020-08-12T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "13.52",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "13.52",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "13.51",
+      "releaseDate": "2020-06-26T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "13.51",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "13.51",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "13.5",
+      "releaseDate": "2020-05-27T04:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "13.5",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "13.5",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "13.02",
       "releaseDate": "2020-01-31T05:00:00Z",
       "standalone": true,
@@ -932,8 +3067,130 @@
       "dependencies": []
     },
     {
+      "version": "13.01",
+      "releaseDate": "2019-12-13T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "13.01",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "13.01",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "version": "13.0",
+      "releaseDate": "2019-11-20T05:00:00Z",
+      "standalone": true,
+      "minimumOperatingSystem": "10.15",
+      "reboot": false,
+      "killApps": [
+        {
+          "bundleId": "com.adobe.AfterEffects",
+          "appName": "Adobe After Effects.app"
+        },
+        {
+          "bundleId": "com.adobe.PremierePro",
+          "appName": "Adobe Premiere Pro.app"
+        },
+        {
+          "bundleId": "com.borisfx.preset-browser",
+          "appName": "Preset Browser.app"
+        },
+        {
+          "bundleId": "com.borisfx.effect-builder",
+          "appName": "Effect Builder.app"
+        },
+        {
+          "bundleId": "com.borisfx.flare-editor",
+          "appName": "Flare Designer.app"
+        },
+        {
+          "bundleId": "com.genarts.MochaWrapper",
+          "appName": "Sapphire Mocha.app"
+        },
+        {
+          "bundleId": "com.borisfx.mocha4bcc_ui",
+          "appName": "Mocha Sapphire.app"
+        }
+      ],
+      "components": [
+        {
+          "name": "Boris FX Sapphire for Adobe",
+          "version": "13.0",
+          "criteria": [
+            {
+              "name": "jamf-patch-sapphire-adobe",
+              "operator": "is",
+              "value": "13.0",
+              "type": "extensionAttribute",
+              "and": true
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "Operating System Version",
+          "operator": "greater than or equal",
+          "value": "10.15",
+          "type": "recon"
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "version": "12.53",
-      "releaseDate": "2019-12-20T04:00:00Z",
+      "releaseDate": "2019-12-20T05:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
@@ -994,7 +3251,7 @@
     },
     {
       "version": "12.06",
-      "releaseDate": "2019-12-11T04:00:00Z",
+      "releaseDate": "2019-12-11T05:00:00Z",
       "standalone": true,
       "minimumOperatingSystem": "10.15",
       "reboot": false,
