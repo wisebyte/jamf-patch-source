@@ -60,7 +60,7 @@
     "appName": "sapphire-ae64.bundle",
     "bundleId": "com.genarts.SapphireAE.plugins",
     "detection": "extensionAttribute",
-    "eaKey": "jamf-patch-sapphire-adobe",
+    "eaKey": "wisebyte-patch-sapphire-adobe",
     "eaDisplayName": "Boris FX Sapphire for Adobe Version",
     "minOS": "10.15",
     "killApps": [

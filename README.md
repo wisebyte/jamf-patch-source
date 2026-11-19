@@ -18,6 +18,7 @@ Settings > Computer Management > Patch Management > + New external source:
 
 ## Wisebyte Catalog titles & version checker
 - `sources.json`: per-title vendor feed config (bundle ID verified from vendor Info.plist/PackageInfo).
+- Patch-definition extension attribute keys use the prefix `wisebyte-patch-` (this is a Wisebyte source, not Jamf's catalog). Example: `wisebyte-patch-sapphire-adobe`. Do not prefix EA keys with `jamf-`. Leave the repo name, Pages hostname, and Jamf API field names unchanged.
 - `scripts/check_versions.py`: fetches feeds, adds any new versions (never invents or removes), bumps `currentVersion`/`lastModified`. Idempotent.
 - `.github/workflows/check-versions.yml`: runs every 6 h + manual dispatch, commits to `main` (Cloudflare Pages redeploys on push).
 - Note: commits pushed with the default `GITHUB_TOKEN` do not trigger other workflows, but Cloudflare Pages' Git integration still deploys them.

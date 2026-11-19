@@ -126,12 +126,21 @@ def crit(name, value): return {"name": name, "operator": "is", "value": value, "
 def is_ea(cfg):
     return cfg.get("detection") == "extensionAttribute" or bool(cfg.get("eaKey"))
 
-def patch(cfg, v, date, mos):
+def default_ea_key(tid):
+    """EA keys are Wisebyte source identifiers, not Jamf's. SapphireAdobe -> wisebyte-patch-sapphire-adobe."""
+    slug = re.sub(r"([a-z0-9])([A-Z])", r"\1-\2", tid or "")
+    slug = re.sub(r"[^A-Za-z0-9]+", "-", slug).strip("-").lower()
+    return f"wisebyte-patch-{slug}"
+
+def ea_key(cfg, tid=None):
+    return cfg.get("eaKey") or default_ea_key(tid or cfg.get("id") or "")
+
+def patch(cfg, v, date, mos, tid=None):
     mos = mos or cfg.get("minOS") or "10.13"
     kill = cfg.get("killApps") or ([{"bundleId": cfg["bundleId"], "appName": cfg["appName"]}] if cfg.get("bundleId") else [])
     if is_ea(cfg):
         criteria = [{
-            "name": cfg["eaKey"],
+            "name": ea_key(cfg, tid),
             "operator": "is",
             "value": v,
             "type": "extensionAttribute",
@@ -147,10 +156,10 @@ def patch(cfg, v, date, mos):
                            "value": mos, "type": "recon"}],
          "dependencies": []}
 
-def default_requirements(cfg):
+def default_requirements(cfg, tid=None):
     if is_ea(cfg):
         return [{
-            "name": cfg["eaKey"],
+            "name": ea_key(cfg, tid),
             "operator": "is not",
             "value": "",
             "type": "extensionAttribute",
@@ -163,14 +172,14 @@ def run(tid, cfg):
     d = json.loads(f.read_text()) if f.exists() else {
         "id": tid, "name": cfg["name"], "publisher": cfg["publisher"], "appName": cfg["appName"],
         "bundleId": cfg["bundleId"], "currentVersion": "", "lastModified": "",
-        "requirements": default_requirements(cfg), "patches": [],
+        "requirements": default_requirements(cfg, tid), "patches": [],
         "extensionAttributes": []}
     feed = FETCH[cfg["source"]["type"]](cfg["source"])
     if not feed: raise RuntimeError("feed returned no versions")
     have = {p["version"] for p in d["patches"]}
     new = [v for v in feed if v not in have]
     if not new: return 0
-    d["patches"] += [patch(cfg, v, *feed[v]) for v in new]
+    d["patches"] += [patch(cfg, v, *feed[v], tid=tid) for v in new]
     d["patches"].sort(key=lambda p: vkey(p["version"]), reverse=True)
     d["currentVersion"] = d["patches"][0]["version"]
     d["lastModified"] = iso(dt.datetime.now(dt.timezone.utc))
