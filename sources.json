@@ -53,5 +53,57 @@
       "minOS": "10.15"
     },
     "notes": "Bundle ID/CFBundleShortVersionString verified from Info.plist in 2.24.1 arm64 + x86_64 DMGs (Developer ID FQN3S7ZG69). History 2.10.0-2.24.1 seeded by HEAD-probing public versioned DMG URLs; dates = file Last-Modified."
+  },
+  "SapphireAdobe": {
+    "name": "Boris FX Sapphire for Adobe",
+    "publisher": "Boris FX",
+    "appName": "sapphire-ae64.bundle",
+    "bundleId": "com.genarts.SapphireAE.plugins",
+    "detection": "extensionAttribute",
+    "eaKey": "jamf-patch-sapphire-adobe",
+    "eaDisplayName": "Boris FX Sapphire for Adobe Version",
+    "minOS": "10.15",
+    "killApps": [
+      {
+        "bundleId": "com.adobe.AfterEffects",
+        "appName": "Adobe After Effects.app"
+      },
+      {
+        "bundleId": "com.adobe.PremierePro",
+        "appName": "Adobe Premiere Pro.app"
+      },
+      {
+        "bundleId": "com.borisfx.preset-browser",
+        "appName": "Preset Browser.app"
+      },
+      {
+        "bundleId": "com.borisfx.effect-builder",
+        "appName": "Effect Builder.app"
+      },
+      {
+        "bundleId": "com.borisfx.flare-editor",
+        "appName": "Flare Designer.app"
+      },
+      {
+        "bundleId": "com.genarts.MochaWrapper",
+        "appName": "Sapphire Mocha.app"
+      },
+      {
+        "bundleId": "com.borisfx.mocha4bcc_ui",
+        "appName": "Mocha Sapphire.app"
+      }
+    ],
+    "source": {
+      "type": "borisfx_downloads",
+      "url": "https://backend.borisfx.com/downloads",
+      "product_line": "Sapphire",
+      "host": "Adobe",
+      "os": "mac",
+      "exclude_host_substrings": [
+        "Photoshop"
+      ],
+      "version_field": "version"
+    },
+    "notes": "Not in Jamf's built-in patch catalog (checked jamf-patch.jamfcloud.com/v1/software, 1587 titles, 2026-11-19) or official Patch Management Software Titles list. Inspected official Adobe macOS installers SapphireAEInstall-2027.dmg (CFBundleVersion 20.0, CFBundleShortVersionString 'Version 2027', bundle ID com.genarts.SapphireAE.plugins in year-specific /Applications/BorisFX/Sapphire 2027 Adobe) and SapphireAEInstall-2026.52.dmg (CFBundleVersion 19.52, ShortVersion 'Version 2026.52', folder Sapphire 2026.5 Adobe). Application Version is not unique across patches, so detection is an EA that reads CFBundleVersion (matches official catalog 'version' field, not display_version 2027.0.0). Checker uses the public Boris FX downloads catalog."
   }
 }

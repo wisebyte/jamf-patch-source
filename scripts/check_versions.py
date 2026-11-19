@@ -21,6 +21,17 @@ def os_norm(v):
     return ".".join(p)
 def vkey(v): return [int(x) if x.isdigit() else 0 for x in v.split(".")]
 
+def parse_iso_date(s):
+    if not s: return None
+    s = str(s).strip().replace("Z", "+00:00")
+    try:
+        d = dt.datetime.fromisoformat(s)
+    except ValueError:
+        return None
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=dt.timezone.utc)
+    return iso(d)
+
 def f_renewedvision(s):
     out = {}
     for o in s["osVersions"]:
@@ -64,27 +75,96 @@ def f_download_page(s):
         out[v] = (iso(email.utils.parsedate_to_datetime(lm)) if lm else None, s.get("minOS"))
     return out
 
-FETCH = {"download_page": f_download_page, "renewedvision": f_renewedvision, "logos_atom": f_logos_atom, "sparkle": f_sparkle}
+def f_borisfx_downloads(s):
+    """Public Boris FX downloads catalog (https://backend.borisfx.com/downloads).
+    Uses the catalog 'version' field (CFBundleVersion, e.g. 20.0 / 19.52), which
+    remains stable as years roll over (2027, 2028, ...). Includes current and
+    legacy entries so a new major year is picked up automatically.
+    """
+    items = json.loads(get(s["url"]))
+    if not isinstance(items, list):
+        raise RuntimeError("Boris FX downloads catalog is not a list")
+    product = (s.get("product_line") or "Sapphire").lower()
+    host = (s.get("host") or "Adobe").lower()
+    osname = (s.get("os") or "mac").lower()
+    exclude = [x.lower() for x in s.get("exclude_host_substrings") or []]
+    field = s.get("version_field") or "version"
+    out = {}
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        blob = " ".join(str(it.get(k) or "") for k in ("product_line", "product", "product_name")).lower()
+        if product not in blob:
+            continue
+        h = (it.get("host") or "").lower()
+        if host not in h:
+            continue
+        if any(x in h for x in exclude):
+            continue
+        plat = ((it.get("platform") or "") + " " + (it.get("os") or "")).lower()
+        if osname not in plat and "macos" not in plat:
+            continue
+        v = str(it.get(field) or "").strip()
+        if not v:
+            continue
+        date = parse_iso_date(it.get("date"))
+        # Prefer a dated entry if the same version appears more than once
+        if v not in out or (date and (not out[v][0] or date > out[v][0])):
+            out[v] = (date, s.get("minOS"))
+    return out
+
+FETCH = {
+    "download_page": f_download_page,
+    "renewedvision": f_renewedvision,
+    "logos_atom": f_logos_atom,
+    "sparkle": f_sparkle,
+    "borisfx_downloads": f_borisfx_downloads,
+}
 
 def crit(name, value): return {"name": name, "operator": "is", "value": value, "type": "recon", "and": True}
 
+def is_ea(cfg):
+    return cfg.get("detection") == "extensionAttribute" or bool(cfg.get("eaKey"))
+
 def patch(cfg, v, date, mos):
-    p = {"version": v, "releaseDate": date or iso(dt.datetime.now(dt.timezone.utc)), "standalone": True,
-         "minimumOperatingSystem": mos or "10.13", "reboot": False,
-         "killApps": [{"bundleId": cfg["bundleId"], "appName": cfg["appName"]}],
-         "components": [{"name": cfg["name"], "version": v, "criteria": [
-             crit("Application Bundle ID", cfg["bundleId"]), crit("Application Version", v)]}],
+    mos = mos or cfg.get("minOS") or "10.13"
+    kill = cfg.get("killApps") or ([{"bundleId": cfg["bundleId"], "appName": cfg["appName"]}] if cfg.get("bundleId") else [])
+    if is_ea(cfg):
+        criteria = [{
+            "name": cfg["eaKey"],
+            "operator": "is",
+            "value": v,
+            "type": "extensionAttribute",
+            "and": True,
+        }]
+    else:
+        criteria = [crit("Application Bundle ID", cfg["bundleId"]), crit("Application Version", v)]
+    return {"version": v, "releaseDate": date or iso(dt.datetime.now(dt.timezone.utc)), "standalone": True,
+         "minimumOperatingSystem": mos, "reboot": False,
+         "killApps": kill,
+         "components": [{"name": cfg["name"], "version": v, "criteria": criteria}],
          "capabilities": [{"name": "Operating System Version", "operator": "greater than or equal",
-                           "value": mos or "10.13", "type": "recon"}],
+                           "value": mos, "type": "recon"}],
          "dependencies": []}
-    return p
+
+def default_requirements(cfg):
+    if is_ea(cfg):
+        return [{
+            "name": cfg["eaKey"],
+            "operator": "is not",
+            "value": "",
+            "type": "extensionAttribute",
+            "and": True,
+        }]
+    return [crit("Application Bundle ID", cfg["bundleId"])]
 
 def run(tid, cfg):
     f = DEFS / f"{tid}.json"
     d = json.loads(f.read_text()) if f.exists() else {
         "id": tid, "name": cfg["name"], "publisher": cfg["publisher"], "appName": cfg["appName"],
         "bundleId": cfg["bundleId"], "currentVersion": "", "lastModified": "",
-        "requirements": [crit("Application Bundle ID", cfg["bundleId"])], "patches": [], "extensionAttributes": []}
+        "requirements": default_requirements(cfg), "patches": [],
+        "extensionAttributes": []}
     feed = FETCH[cfg["source"]["type"]](cfg["source"])
     if not feed: raise RuntimeError("feed returned no versions")
     have = {p["version"] for p in d["patches"]}
